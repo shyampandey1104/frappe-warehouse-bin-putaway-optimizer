@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include putaway *.css
+recursive-include putaway *.csv
+recursive-include putaway *.html
+recursive-include putaway *.ico
+recursive-include putaway *.js
+recursive-include putaway *.json
+recursive-include putaway *.md
+recursive-include putaway *.png
+recursive-include putaway *.py
+recursive-include putaway *.svg
+recursive-include putaway *.txt
+recursive-exclude putaway *.pyc
