@@ -27,6 +27,9 @@ class TestWarehouseBinPutaway(unittest.TestCase):
         self.assertEqual(rec.recommended_bin_id, "A01-B01-S01-01")
 
     def test_serpentine_pick_path(self):
+        bin_obj = self.optimizer.bins["A01-B01-S01-01"]
+        bin_obj.current_stored_sku = "SKU-FAST-COLDDRINK"
+        bin_obj.current_stored_qty = 20
         path = self.optimizer.generate_serpentine_pick_path(["SKU-FAST-COLDDRINK"])
         self.assertEqual(len(path), 1)
         self.assertEqual(path[0]["stop_sequence"], 1)

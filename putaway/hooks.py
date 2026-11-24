@@ -4,7 +4,7 @@
 app_name = "putaway"
 app_title = "Frappe Warehouse Bin Putaway Optimizer"
 app_publisher = "Shyamkumar Pandey"
-app_description = "Frappe Warehouse Bin Putaway Optimizer for Frappe and ERPNext"
+app_description = "Frappe Warehouse Bin Putaway Optimizer - Enterprise Multi-DocType Solution for Frappe & ERPNext"
 app_email = "shyampandey1104@gmail.com"
 app_license = "MIT"
 
@@ -16,16 +16,22 @@ app_include_js = "/assets/putaway/js/putaway.bundle.js"
 # Document Events
 # ---------------
 doc_events = {
-    "DocType Event": {
-        "on_submit": "putaway.engine.on_document_submit",
-        "on_cancel": "putaway.engine.on_document_cancel"
+    "Frappe Warehouse Bin Putaway Optimizer Entry": {
+        "validate": "putaway.services.validator.EnterpriseValidationEngine.validate_compliance_rules",
+        "on_submit": "putaway.services.integration_service.EnterpriseIntegrationService.verify_remote_status"
     }
 }
 
-# Scheduled Tasks
-# ---------------
+# Scheduled Background Tasks
+# --------------------------
 scheduler_events = {
+    "hourly": [
+        "putaway.tasks.hourly_sync"
+    ],
     "daily": [
-        "putaway.engine.daily_scheduled_sync"
+        "putaway.tasks.daily_reconciliation"
+    ],
+    "weekly": [
+        "putaway.tasks.weekly_digest"
     ]
 }

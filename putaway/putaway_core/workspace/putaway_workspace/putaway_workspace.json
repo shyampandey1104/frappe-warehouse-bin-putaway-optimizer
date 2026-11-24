@@ -1,30 +1,104 @@
 {
- "charts": [],
- "content": "[{\"type\":\"header\",\"data\":{\"text\":\"Frappe Warehouse Bin Putaway Optimizer Workspace\",\"level\":4}}]",
+ "charts": [
+  {
+   "chart_name": "Frappe Warehouse Bin Putaway Optimizer Volume Trend",
+   "label": "Frappe Warehouse Bin Putaway Optimizer Volume Trend"
+  }
+ ],
+ "content": "[{\"type\": \"header\", \"data\": {\"text\": \"Frappe Warehouse Bin Putaway Optimizer Workspace\", \"level\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Frappe Warehouse Bin Putaway Optimizer Operations\"}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Audit & Compliance\"}}]",
  "creation": "2026-04-01 10:00:00.000000",
  "custom_blocks": [],
  "docstatus": 0,
  "doctype": "Workspace",
  "for_user": "",
  "hide_custom": 0,
- "icon": "octicon octicon-book",
+ "icon": "octicon octicon-package",
  "idx": 0,
  "is_hidden": 0,
  "label": "Frappe Warehouse Bin Putaway Optimizer",
- "links": [],
+ "links": [
+  {
+   "label": "Operational Documents",
+   "type": "Card Break"
+  },
+  {
+   "doctype": "Frappe Warehouse Bin Putaway Optimizer Entry",
+   "label": "Frappe Warehouse Bin Putaway Optimizer Entry",
+   "link_to": "Frappe Warehouse Bin Putaway Optimizer Entry",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "label": "Audit & Reports",
+   "type": "Card Break"
+  },
+  {
+   "doctype": "Frappe Warehouse Bin Putaway Optimizer Audit Log",
+   "label": "Frappe Warehouse Bin Putaway Optimizer Audit Log",
+   "link_to": "Frappe Warehouse Bin Putaway Optimizer Audit Log",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "is_query_report": 1,
+   "label": "Frappe Warehouse Bin Putaway Optimizer Summary",
+   "link_to": "Frappe Warehouse Bin Putaway Optimizer Summary",
+   "link_type": "Report",
+   "type": "Link"
+  },
+  {
+   "label": "Configuration",
+   "type": "Card Break"
+  },
+  {
+   "doctype": "Frappe Warehouse Bin Putaway Optimizer Settings",
+   "label": "Frappe Warehouse Bin Putaway Optimizer Settings",
+   "link_to": "Frappe Warehouse Bin Putaway Optimizer Settings",
+   "link_type": "DocType",
+   "type": "Link"
+  }
+ ],
  "modified": "2026-04-01 10:00:00.000000",
  "modified_by": "Administrator",
  "module": "Putaway_Core",
  "name": "Frappe Warehouse Bin Putaway Optimizer",
  "owner": "Administrator",
  "public": 1,
- "quick_lists": [],
+ "quick_lists": [
+  {
+   "document_type": "Frappe Warehouse Bin Putaway Optimizer Entry",
+   "label": "Recent Frappe Warehouse Bin Putaway Optimizer Entries"
+  }
+ ],
  "roles": [
   {
    "role": "System Manager"
+  },
+  {
+   "role": "Accounts User"
   }
  ],
  "sequence_id": 1,
- "shortcuts": [],
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "All Frappe Warehouse Bin Putaway Optimizer Entrys",
+   "link_to": "Frappe Warehouse Bin Putaway Optimizer Entry",
+   "type": "DocType"
+  },
+  {
+   "color": "Green",
+   "label": "System Settings",
+   "link_to": "Frappe Warehouse Bin Putaway Optimizer Settings",
+   "type": "DocType"
+  },
+  {
+   "color": "Blue",
+   "label": "Compliance Digest",
+   "link_to": "Frappe Warehouse Bin Putaway Optimizer Summary",
+   "type": "Report"
+  }
+ ],
  "title": "Frappe Warehouse Bin Putaway Optimizer"
 }
